@@ -3,7 +3,10 @@ import 'package:go_router/go_router.dart';
 import 'package:widgets_app/config/menu/menu_items.dart';
 
 class HomeScreen extends StatelessWidget {
+  static const String name = 'home_screen';
   const HomeScreen({Key? key}) : super(key: key);
+
+  
 
   @override
   Widget build(BuildContext context) {
@@ -51,6 +54,7 @@ class _CustomsTitle extends StatelessWidget {
       leading: Icon(menuItem.icon, color: colors.primary,),
       trailing: Icon(Icons.arrow_forward_ios_outlined, color: colors.primary),
       onTap: () {
+        // context.pushNamed(HomeScreen.name);
         context.push(menuItem.link);
       },
     );
