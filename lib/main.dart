@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_app/config/theme/app_theme.dart';
+import 'package:widgets_app/presentation/screens/buttons/buttons_screen.dart';
+import 'package:widgets_app/presentation/screens/cards/cards_screen.dart';
+import 'package:widgets_app/presentation/screens/home/home_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -12,12 +15,13 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: AppTheme(selectedColor: 0).getTheme(),
-      home: Scaffold(
-        body: Center(
-          child: FilledButton(onPressed: (){}, child: const Text("hola mundo")),
-        ),
-      ),
+      theme: AppTheme(selectedColor: 1).getTheme(),
+      routes: {
+        '/buttons' : (_) => const ButtonsScreen(),
+        '/cards' : (_) => const CardsScreen()
+      },
+      home: const HomeScreen()
+
     );
   }
 }

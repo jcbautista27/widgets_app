@@ -50,7 +50,7 @@ class _CustomsTitle extends StatelessWidget {
       leading: Icon(menuItem.icon, color: colors.primary,),
       trailing: Icon(Icons.arrow_forward_ios_outlined, color: colors.primary),
       onTap: () {
-        //NAVEGAR A OTRA PANTALLA
+        Navigator.pushNamed(context, menuItem.link);
       },
     );
   }
