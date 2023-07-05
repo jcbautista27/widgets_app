@@ -4,21 +4,21 @@ import 'package:go_router/go_router.dart';
 import '../../presentation/screens/screens.dart';
 
 final GoRouter appRouter = GoRouter(
-  initialExtra: '/',
+  initialLocation: '/',
   routes: <RouteBase>[
     GoRoute(
-      name: HomeScreen.name,
       path: '/',
+      name: HomeScreen.name,
       builder: (BuildContext context, GoRouterState state) => const HomeScreen(),
     ),
     GoRoute(
-      name: ButtonsScreen.name,
       path: '/buttons',
+      name: ButtonsScreen.name, 
       builder: (BuildContext context, GoRouterState state) => const ButtonsScreen(),
     ),
     GoRoute(
-      name: CardsScreen.name,
       path: '/cards',
+      name: CardsScreen.name,
       builder: (BuildContext context, GoRouterState state) => const CardsScreen(),
     ),
   ],
