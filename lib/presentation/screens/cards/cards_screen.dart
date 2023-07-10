@@ -188,7 +188,10 @@ class _CardType4 extends StatelessWidget {
         children: [
 
           Image.network(
-            'https://picsum.photos/id/${ elevation.toInt() }/600/350'
+            'https://picsum.photos/id/${ elevation.toInt() }/600/350',
+            height: 350,
+            fit: BoxFit.cover,
+
           ),
 
           Align(
